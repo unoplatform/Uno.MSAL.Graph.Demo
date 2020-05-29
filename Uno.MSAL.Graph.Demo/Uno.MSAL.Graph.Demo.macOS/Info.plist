@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>Uno.MSAL.Graph.Demo.macOS</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.companyname.Uno.MSAL.Graph.Demo-macOS</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.11</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>${AuthorCopyright:HtmlEncode}</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>ATSApplicationFontsPath</key>
+	<string>Fonts/winjs-symbols.ttf</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.companyname.MicrosoftDemoProject</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>msala74f513b-2d8c-45c0-a15a-15e63f7a7862</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

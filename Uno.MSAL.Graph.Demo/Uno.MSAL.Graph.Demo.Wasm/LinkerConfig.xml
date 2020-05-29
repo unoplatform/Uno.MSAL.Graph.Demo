@@ -1,0 +1,12 @@
+﻿<linker>
+  <assembly fullname="Uno.MSAL.Graph.Demo.Wasm" />
+  <assembly fullname="Uno.UI" />
+	<assembly fullname="Microsoft.Identity.Client" />
+	<assembly fullname="Microsoft.Graph" />
+	<assembly fullname="Microsoft.Graph.Core" />
+
+  <assembly fullname="System.Core">
+	<!-- This is required by JSon.NET and any expression.Compile caller -->
+	<type fullname="System.Linq.Expressions*" />
+  </assembly>
+</linker>
