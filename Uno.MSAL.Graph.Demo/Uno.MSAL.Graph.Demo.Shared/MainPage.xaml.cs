@@ -10,13 +10,14 @@ using Windows.UI.Xaml.Media.Imaging;
 using Microsoft.Graph;
 using Microsoft.Identity.Client;
 using Uno.Extensions;
+using Uno.UI.MSAL;
 using Prompt = Microsoft.Identity.Client.Prompt;
 
 namespace Uno.MSAL.Graph.Demo
 {
     public sealed partial class MainPage : Page, IAuthenticationProvider
     {
-        private const string CLIENT_ID = "b5bb46ec-eff1-49fc-aadb-c2a832f05532";
+        private const string CLIENT_ID = "a74f513b-2d8c-45c0-a15a-15e63f7a7862";
         private const string TENANT_ID = "6d53ef61-b6d1-4150-ae0b-43b90e75e0cd";
 
 #if __WASM__
@@ -41,10 +42,8 @@ namespace Uno.MSAL.Graph.Demo
                 .Create(CLIENT_ID)
                 .WithTenantId(TENANT_ID)
                 .WithRedirectUri(REDIRECT_URI)
-#if __ANDROID__
-                .WithParentActivityOrWindow(()=>Uno.UI.ContextHelper.Current as Android.App.Activity)
-#elif __IOS__ || __MACOS__
-                .WithParentActivityOrWindow(()=>Window.RootViewController)
+                .WithUnoHelpers()
+#if __IOS__
                 .WithIosKeychainSecurityGroup("86AC3CZ5DN.com.microsoft.adalcache")
 #endif
                 .Build();
@@ -54,6 +53,7 @@ namespace Uno.MSAL.Graph.Demo
         {
             var result = await _app.AcquireTokenInteractive(SCOPES)
                 .WithPrompt(Prompt.SelectAccount)
+                .WithUnoHelpers()
                 .ExecuteAsync();
 
             tokenBox.Text = result.AccessToken;
@@ -69,9 +69,12 @@ namespace Uno.MSAL.Graph.Demo
             var client = new GraphServiceClient(http);
             client.AuthenticationProvider = this;
 
+            var imageTask = client.Me.Photo.Content.Request().GetAsync();
+            var nameTask = client.Me.Request().GetAsync();
+
             try
             {
-                using (var stream = await client.Me.Photo.Content.Request().GetAsync())
+                using (var stream = await imageTask)
                 {
                     var bitmap = new BitmapImage();
 #if HAS_UNO
@@ -89,7 +92,7 @@ namespace Uno.MSAL.Graph.Demo
 
             try
             {
-                var me = await client.Me.Request().GetAsync();
+                var me = await nameTask;
 
                 name.Text = me.DisplayName;
             }
