@@ -1,4 +1,4 @@
-# Demo App for `Uno.Microsoft.Indentity.Client` (MSAL.NET)
+# Demo App for `Uno.UI.MSAL` (extensions to MSAL.NET for Uno Platform)
 
 This is a demo app for the usage of MSAL.NET into a Uno app, illustrating the usage for Uno-Wasm.
 
