@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uno.MSAL.Graph.Demo.iOS", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uno.MSAL.Graph.Demo.UWP", "Uno.MSAL.Graph.Demo\Uno.MSAL.Graph.Demo.UWP\Uno.MSAL.Graph.Demo.UWP.csproj", "{8AA60300-B2F3-4D53-B08D-7BF12625CCD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uno.MSAL.Graph.Demo.Wasm", "Uno.MSAL.Graph.Demo\Uno.MSAL.Graph.Demo.Wasm\Uno.MSAL.Graph.Demo.Wasm.csproj", "{3A61F01F-3413-4659-A63F-1F372CF908BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uno.MSAL.Graph.Demo.Wasm", "Uno.MSAL.Graph.Demo\Uno.MSAL.Graph.Demo.Wasm\Uno.MSAL.Graph.Demo.Wasm.csproj", "{3A61F01F-3413-4659-A63F-1F372CF908BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uno.MSAL.Graph.Demo.macOS", "Uno.MSAL.Graph.Demo\Uno.MSAL.Graph.Demo.macOS\Uno.MSAL.Graph.Demo.macOS.csproj", "{65689FFC-81CC-43E1-AF60-9942340A3427}"
 EndProject

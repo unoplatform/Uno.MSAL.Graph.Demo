@@ -16,7 +16,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
     <PackageReference Include="Uno.Core" Version="2.0.0" />
-    <PackageReference Include="Uno.UI.MSAL" Version="3.0.0-dev.471" />
+    <PackageReference Include="Uno.UI.MSAL" Version="3.1.0-dev.739" />
   </ItemGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
