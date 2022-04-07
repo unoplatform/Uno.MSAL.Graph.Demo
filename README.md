@@ -30,7 +30,7 @@ The code is already including an App ID your can use to try the app locally. You
 
 11. Click "Sign-In interactively"
 
-12. Complete sign-in process. The token should appear (tip: if you're curious what's in it, copy and paste it to https://jwt.ioa/)
+12. Complete sign-in process. The token should appear (tip: if you're curious what's in it, copy and paste it to https://jwt.io/)
 
 13. Press "Load from graph", the thumbnail of the user should appear (if available and authorized)
 
